@@ -4,13 +4,10 @@ namespace App\Controller;
 
 use App\Data\StudentDto;
 use App\Entity\Student;
-use App\Events\NewStudentEvent;
-use App\EventSubscriber\NewStudentSubscriber;
 use App\Exception\ValidationException;
 use App\Repository\StudentRepository;
 use App\Services\StudentService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -35,7 +32,7 @@ class StudentController extends AbstractController
     {
         return $this->json([
             'message' => 'Student fetched successfully',
-            'data' => StudentDto::fromModel($student),
+            'data'    => StudentDto::fromModel($student),
         ]);
     }
 

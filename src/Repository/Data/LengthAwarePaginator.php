@@ -7,6 +7,7 @@ use App\Core\Contracts\Arrayable;
 class LengthAwarePaginator implements Arrayable
 {
     use \App\Core\Concerns\Arrayable;
+
     public function __construct(
         private array $data,
         private MetaData $meta,
