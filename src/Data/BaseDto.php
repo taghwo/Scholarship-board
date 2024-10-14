@@ -12,7 +12,8 @@ abstract class BaseDto
         $paginatedData = $collection instanceof LengthAwarePaginator;
 
         $preparedData = array_map(
-            fn (BaseEntity $datum) => static::from($datum->toArray()), $paginatedData ? $collection->getData() : $collection
+            fn (BaseEntity $datum) => static::from($datum->toArray()),
+            $paginatedData ? $collection->getData() : $collection
         );
 
         if (!$paginatedData) {

@@ -4,7 +4,6 @@ namespace App\Repository;
 
 use App\Entity\Scholarship;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\Query\Expr\Base;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**

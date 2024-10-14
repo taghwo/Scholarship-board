@@ -42,6 +42,7 @@ class Scholarship extends BaseEntity
     {
         $this->students = new ArrayCollection();
     }
+
     public function getId(): ?int
     {
         return $this->id;
